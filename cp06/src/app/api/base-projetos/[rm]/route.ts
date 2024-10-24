@@ -19,7 +19,7 @@ export async function getByRm(rm:string) {
 export async function GET(request:Request,{params}:{params:{rm:string}}) {
     try {
 
-        const { rm } = params;
+        const { rm } = await params;
 
         const documentos = await getByRm(rm);
         
