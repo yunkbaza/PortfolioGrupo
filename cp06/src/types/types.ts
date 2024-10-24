@@ -1,10 +1,19 @@
 export type TipoAluno = {
-    rm: string;
-    nome: string;
-    area: string;
-    desc: string;
-    // projetos: {nome:string, desc:string, nota:number}[];
-    github: string;
-    linkedin: string;
-    email: string;
+    rm:string;
+    nome:string;
+    area:string;
+    desc:string;
+    github:string;
+    linkedin:string;
+    email:string;
+}
+
+export type TipoProjeto = {
+    nome:string; // 30
+    rm:string; // 6
+    desc:string; // 200
+    nota:number; // 0-10
+    tipoAvaliacao:string; // 15
+    foto:string; // 100
+    feedback:string; // 150
 }

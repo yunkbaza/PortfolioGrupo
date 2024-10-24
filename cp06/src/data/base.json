@@ -1,0 +1,29 @@
+[
+    {
+        "rm" : "555497",
+        "nome" : "Luiz",
+        "area" : "FullStack",
+        "desc" : "Desenvolvedor Full Stack",
+        "github" : "https://github.com/luizpaulo73",
+        "linkedin" : "https://www.linkedin.com/in/luizpaulo73/",
+        "email" : "luiz.paulo2005@hotmail.com"
+    },
+    {
+        "rm" : "557245",
+        "nome" : "Vitor Kenzo",
+        "area" : "Back-end",
+        "desc" : "Desenvolvedor Back-end",
+        "github" : "https://github.com/vitorkenzoo",
+        "linkedin" : "https://br.linkedin.com/in/vitor-mizumoto-b419a6315",
+        "email" : "vitormizumoto@hotmail.com"
+    },
+    {
+        "rm" : "557774",
+        "nome" : "Jubs",
+        "area" : "FullStack",
+        "desc" : "Entusiasta no ramo da computação com foco em Inteligência Artificial , possuo certificações no ramo da informática e administração que servem como suporte para minha inserção no mercado de trabalho. Destaco como qualidades pessoais o comprometimento e a vontade de aprender, além de saber trabalhar em equipe.",
+        "github" : "https://github.com/jubshereman",
+        "linkedin" : "https://www.linkedin.com/in/jubshere/",
+        "email" : "contatojulio478@gmail.com"
+    }
+]
