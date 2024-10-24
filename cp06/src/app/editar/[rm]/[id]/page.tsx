@@ -2,18 +2,19 @@
 import { useEffect , useState } from "react";
 import { TipoProjeto } from "@/types/types";
 import alunos from '@/data/base.json';
-import { useRouter } from "next/navigation";
+import { useParams , useRouter } from "next/navigation";
 
-export default function Editar({params}:{params: {rm:string , id:string}}) {
+export default function Editar() {
 
-    const navigate = useRouter();
-  const { rm , id } = params;
+  const params = useParams();
+  const router = useRouter();
+  const { rm, id } = params;
   const [projeto, setProjeto] = useState<TipoProjeto>({
     $id: '',
     nome: "",
     rm: "",
     desc: "",
-    nota: undefined,
+    nota: 0,
     tipoAvaliacao: "",
     foto: "",
     feedback: ""
@@ -55,12 +56,12 @@ export default function Editar({params}:{params: {rm:string , id:string}}) {
             nome: "",
             rm: "",
             desc: "",
-            nota: undefined,
+            nota: 0,
             tipoAvaliacao: "",
             foto: "",
             feedback: ""
           });
-          navigate.push(`/lista-projetos/${rm}`)
+          router.push(`/lista-projetos/${rm}`)
           console.table(data);
         }
     } catch (error) {

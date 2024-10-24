@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function ListaProjetos({ params }: { params: { rm: string } }) {
     const { rm } = params;
-    const alunoSelecionado = aluno.find(a => a.rm === rm);
+    const alunoSelecionado = aluno.find(aluno => aluno.rm === rm);
     const [listaProjetos, setListaProjetos] = useState<TipoProjeto[]>([]);
 
     const chamadaApi = async () => {
@@ -26,7 +26,8 @@ export default function ListaProjetos({ params }: { params: { rm: string } }) {
 
     useEffect(() => {
         chamadaApi();
-    }, [rm]);
+    },  [rm]);
+
 
     const handleDelete = async (id: string) => {
         try {
@@ -35,7 +36,7 @@ export default function ListaProjetos({ params }: { params: { rm: string } }) {
             });
             if (response.ok) {
                 alert("Produto deletado com sucesso");
-                chamadaApi(); // Atualiza a lista após a exclusão
+                chamadaApi();
             } else {
                 throw new Error('Erro ao deletar o produto');
             }
