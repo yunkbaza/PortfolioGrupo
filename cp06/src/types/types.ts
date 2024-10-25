@@ -2,6 +2,7 @@ export type TipoAluno = {
     $id: string;
     rm:string;
     nome:string;
+    nomeCompleto:string;
     area:string;
     desc:string;
     github:string;

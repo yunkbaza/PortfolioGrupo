@@ -14,7 +14,7 @@ export default function Cabecalho() {
         <nav>
             <ul className="flex justify-evenly w-screen">
                 {alunos.map((aluno) => (
-                    <li key={aluno.rm}><Link href={/portifolio/${aluno.rm}} className="hover:border-b-2 border-b-black font-bold text-md">{aluno.nome}</Link></li>
+                    <li key={aluno.rm}><Link href={`/portifolio/${aluno.rm}`} className="hover:border-b-2 border-b-black font-bold text-md">{aluno.nome}</Link></li>
                 ))}
             </ul>
         </nav>

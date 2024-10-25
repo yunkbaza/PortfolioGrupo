@@ -2,6 +2,7 @@
     {
         "rm" : "555497",
         "nome" : "Luiz",
+        "nomeCompleto" : "Luiz Paulo Freitas Fernandes",
         "area" : "FullStack",
         "desc" : "Desenvolvedor Full Stack",
         "github" : "https://github.com/luizpaulo73",
@@ -11,6 +12,7 @@
     {
         "rm" : "557245",
         "nome" : "Vitor",
+        "nomeCompleto" : "Vitor Kenzo Mizumoto",
         "area" : "Back-end",
         "desc" : "Desenvolvedor Back-end",
         "github" : "https://github.com/vitorkenzoo",
@@ -20,6 +22,7 @@
     {
         "rm" : "557774",
         "nome" : "Júlio",
+        "nomeCompleto" : "Júlio César Nunes Oliveira",
         "area" : "FullStack",
         "desc" : "Entusiasta no ramo da computação com foco em Inteligência Artificial , possuo certificações no ramo da informática e administração que servem como suporte para minha inserção no mercado de trabalho. Destaco como qualidades pessoais o comprometimento e a vontade de aprender, além de saber trabalhar em equipe.",
         "github" : "https://github.com/jubshereman",
