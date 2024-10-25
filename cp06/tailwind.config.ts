@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        verdeAgua: "#1BCDC1",
+      },
+      fontFamily: {
+        kanit: ["Kanit", "sans-serif"],
       },
     },
   },
