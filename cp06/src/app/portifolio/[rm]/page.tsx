@@ -1,7 +1,9 @@
  
-export default function Portifolio({params}:{params: {rm:string}}) {
+export default async function Portifolio({params}:{params: {rm:string}}) {
   
+  const { rm } = await params
+
   return (
-    <div>Portifolio</div>
+    <div>{rm}</div>
   )
 }
