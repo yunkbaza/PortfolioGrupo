@@ -54,7 +54,6 @@ export default function FormCadastro() {
             </div>
             <div>
                 <label>RM:</label>
-                <input type="text" name="rm" value={projeto.rm} required onChange={(e) => setProjeto({ ...projeto, rm: e.target.value })} />
                 <select name="tipoAvaliacao" value={projeto.rm} required onChange={(e) =>  setProjeto({ ...projeto, rm: e.target.value })}>
                         <option value="">Selecione</option>
                     {alunos.map((aluno) => (
@@ -77,6 +76,7 @@ export default function FormCadastro() {
                     <option value="cp">CheckPoint</option>
                     <option value="gs">Global Solution</option>
                     <option value="challenge">Challenge</option>
+                    <option value="projetos">Challenge</option>
                 </select>
             </div>
             <div>

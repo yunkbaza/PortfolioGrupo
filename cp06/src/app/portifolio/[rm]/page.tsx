@@ -1,3 +1,4 @@
+import Projeto from "@/components/Projeto/Projeto";
 import aluno from "@/data/base.json";
 
 export default async function Portifolio({params}:{params: {rm:string}}) {
@@ -14,11 +15,11 @@ export default async function Portifolio({params}:{params: {rm:string}}) {
         <p>{alunoSelecionado?.email}</p>
         <p>{alunoSelecionado?.desc}</p>
       </div>
-      <div>
-        <div><h2>CheckPoint</h2></div>
-        <div><h2>Global Solution</h2></div>
-        <div><h2>Challenge</h2></div>
-        <div><h2>Projetos</h2></div>
+      <div className="flex flex-col gap-4">
+        <Projeto tipo="cp" rm={rm}/>
+        <Projeto tipo="gs" rm={rm}/>
+        <Projeto tipo="challenge" rm={rm}/> 
+        <Projeto tipo="projetos" rm={rm}/> 
       </div>
     </section>
   )

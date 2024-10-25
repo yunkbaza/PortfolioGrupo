@@ -12,6 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         verdeAgua: "#1BCDC1",
+        verdeCard: "#25E8DB",
       },
       fontFamily: {
         kanit: ["Kanit", "sans-serif"],
