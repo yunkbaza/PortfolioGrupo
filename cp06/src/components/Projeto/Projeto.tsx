@@ -1,6 +1,7 @@
 "use client"
 import { useState , useEffect } from "react";
 import { TipoProjeto } from "@/types/types";
+import Link from "next/link";
 
 export default function Projeto(props: {tipo:string , rm:string}) {
 
@@ -38,18 +39,17 @@ export default function Projeto(props: {tipo:string , rm:string}) {
       chamadaApi();
   },  [props.rm]);
 
+ 
+
+
   return (
-    <div className="bg-verdeCard">
+    <div className="bg-verdeCard w-11/12 mx-auto p-2 h-96 overflow-scroll">
       <h2>{tipo}</h2>
       <nav>
         <ul>
           {listaProjetos.filter(projeto => projeto.tipoAvaliacao == props.tipo).map((projeto) => (
             <li key={projeto.$id}>
-              <p>Nome: {projeto.nome}</p>
-              <p>{projeto.desc}</p>
-              <p>{projeto.nota}</p>
-              <p>{projeto.feedback}</p>
-              <p>{projeto.foto}</p>
+              <Link href={`/projeto/${props.rm}/${projeto.$id}`}>{projeto.nome}</Link>
             </li>
      ))}
         </ul>

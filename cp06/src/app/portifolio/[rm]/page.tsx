@@ -1,5 +1,8 @@
 import Projeto from "@/components/Projeto/Projeto";
 import aluno from "@/data/base.json";
+import perfil from "@/image/perfil.png";
+import Image from "next/image";
+
 
 export default async function Portifolio({params}:{params: {rm:string}}) {
   
@@ -10,10 +13,11 @@ export default async function Portifolio({params}:{params: {rm:string}}) {
 
   return (
     <section>
-      <div>
-        <h1>{alunoSelecionado?.nomeCompleto}</h1>
-        <p>{alunoSelecionado?.email}</p>
-        <p>{alunoSelecionado?.desc}</p>
+      <div className="flex flex-col items-center mt-5">
+        <Image src={perfil} alt="Perfil" className="w-1/2"/>
+        <h1 className="text-xl font-bold">{alunoSelecionado?.nomeCompleto}</h1>
+        <p className="text-md">{alunoSelecionado?.email}</p>
+        <p className="text-md">{alunoSelecionado?.desc}</p>
       </div>
       <div className="flex flex-col gap-4">
         <Projeto tipo="cp" rm={rm}/>
