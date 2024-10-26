@@ -43,8 +43,8 @@ export default function Projeto(props: {tipo:string , rm:string}) {
 
 
   return (
-    <div className="bg-verdeCard w-11/12 mx-auto p-2 h-96 overflow-scroll">
-      <h2>{tipo}</h2>
+    <div className="bg-verdeCard w-11/12 mx-auto p-2 min-h-40 overflow-y rounded-2xl">
+      <h2 className="text-center">{tipo}</h2>
       <nav>
         <ul>
           {listaProjetos.filter(projeto => projeto.tipoAvaliacao == props.tipo).map((projeto) => (

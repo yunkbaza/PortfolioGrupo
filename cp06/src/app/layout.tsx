@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className="font-kanit flex flex-col min-h-screen justify-between">
         <Cabecalho />
-        <main className="flex-grow">
+        <main className="flex flex-grow justify-center items-center">
           {children}
         </main>
         <Rodape />

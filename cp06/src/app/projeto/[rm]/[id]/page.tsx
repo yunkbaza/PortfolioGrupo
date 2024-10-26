@@ -30,26 +30,15 @@ export default function Projeto() {
     },  [rm , id]);
 
   return (
-    <section className="my-auto">
+    <section className="w-11/12">
         {projeto ?
-        <div key={projeto.$id} className="bg-verdeCard w-11/12 mx-auto mt-4 rounded-2xl p-4 my-auto">
-            <h2>{projeto.nome}</h2>
-            <p>{projeto.desc}</p>
-            <p>{projeto.nota}</p>
-            <p>{projeto.feedback}</p>
-            <p>{projeto.foto}</p>
+        <div key={projeto.$id} className="bg-verdeCard mt-4 rounded-2xl p-4 mx-auto text-center">
+            <h2 className="text-2xl">{projeto.nome}</h2>
+            <p className="text-lg">{projeto.desc}</p>
+            <p className="text-lg">Nota: {projeto.nota}</p>
+            <p className="text-lg">Feedback: {projeto.feedback}</p>
         </div> : 
         <></>}
     </section>
-    // export type TipoProjeto = {
-    //     $id: string;
-    //     nome:string; // 30
-    //     rm:string; // 6
-    //     desc:string; // 200
-    //     nota:number; // 0-10
-    //     tipoAvaliacao:string; // 15
-    //     foto:string; // 100
-    //     feedback:string; // 150
-    // }
   )
 }
