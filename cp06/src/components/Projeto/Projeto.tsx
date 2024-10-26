@@ -39,17 +39,14 @@ export default function Projeto(props: {tipo:string , rm:string}) {
       chamadaApi();
   },  [props.rm]);
 
- 
-
-
   return (
-    <div className="bg-verdeCard w-11/12 mx-auto p-2 min-h-40 overflow-y rounded-2xl">
-      <h2 className="text-center">{tipo}</h2>
+    <div className="bg-verdeCard w-11/12 mx-auto p-2 min-h-40 overflow-y rounded-2xl md:w-full">
+      <h2 className="text-center font-bold text-xl mb-2">{tipo}</h2>
       <nav>
         <ul>
           {listaProjetos.filter(projeto => projeto.tipoAvaliacao == props.tipo).map((projeto) => (
-            <li key={projeto.$id}>
-              <Link href={`/projeto/${props.rm}/${projeto.$id}`}>{projeto.nome}</Link>
+            <li key={projeto.$id} className="text-center">
+              <Link href={`/projeto/${props.rm}/${projeto.$id}`} className="underline">{"<"}{projeto.nome}{">"}</Link>
             </li>
      ))}
         </ul>
