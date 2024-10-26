@@ -47,52 +47,63 @@ export default function ListaProjetos({ params }: { params: { rm: string } }) {
     };
 
     return (
-        <div>
-            <h2>Projetos</h2>
-            <h2>Aluno: {alunoSelecionado?.nome}</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome do projeto</th>
-                        <th>RM</th>
-                        <th>Descrição</th>
-                        <th>Nota</th>
-                        <th>Tipo Avaliação</th>
-                        <th>Foto</th>
-                        <th>Feedback</th>
-                        <th>Deletar | Editar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {listaProjetos.length > 0 ? (
-                        listaProjetos.map((projeto: TipoProjeto) => (
-                            <tr key={projeto.$id}>
-                                <td>{projeto.nome}</td>
-                                <td>{projeto.rm}</td>
-                                <td>{projeto.desc}</td>
-                                <td>{projeto.nota}</td>
-                                <td>{projeto.tipoAvaliacao}</td>
-                                <td><Image src='' alt="Foto do Projeto" width={100} height={100} /></td>
-                                <td>{projeto.feedback}</td>
-                                <td>
-                                    <button onClick={() => handleDelete(projeto.$id)}>Deletar</button><Link href={`/editar/${projeto.rm}/${projeto.$id}`}>Editar</Link>
-
-                                </td>
-                            </tr>
-                        ))
-                    ) : (
-                        <tr>
-                            <td colSpan={8}>Nenhum projeto encontrado</td>
-                        </tr>
-                    )}
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colSpan={7}>Total de projetos</td>
-                        <td>{listaProjetos.length}</td>
-                    </tr>
-                </tfoot>
-            </table>
+        <div className="w-11/12 sm:p-4">
+        <h2 className="text-xl font-semibold mb-2">Projetos</h2>
+        <h2 className="text-lg mb-4">Aluno: {alunoSelecionado?.nome}</h2>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto">
+            {listaProjetos.length > 0 ? (
+                listaProjetos.map((projeto: TipoProjeto) => (
+                    <div key={projeto.$id} className="border border-gray-300 p-4 rounded-lg">
+                        <div className="mb-2">
+                            <p className="font-semibold text-sm text-gray-700">Nome do projeto:</p>
+                            <p className="text-sm">{projeto.nome}</p>
+                        </div>
+                        <div className="mb-2">
+                            <p className="font-semibold text-sm text-gray-700">RM:</p>
+                            <p className="text-sm">{projeto.rm}</p>
+                        </div>
+                        <div className="mb-2">
+                            <p className="font-semibold text-sm text-gray-700">Descrição:</p>
+                            <p className="text-sm">{projeto.desc}</p>
+                        </div>
+                        <div className="mb-2">
+                            <p className="font-semibold text-sm text-gray-700">Nota:</p>
+                            <p className="text-sm">{projeto.nota}</p>
+                        </div>
+                        <div className="mb-2">
+                            <p className="font-semibold text-sm text-gray-700">Tipo Avaliação:</p>
+                            <p className="text-sm">{projeto.tipoAvaliacao}</p>
+                        </div>
+                        <div className="mb-2">
+                            <p className="font-semibold text-sm text-gray-700">Foto:</p>
+                            <Image src="" alt="Foto do Projeto" width={80} height={80} className="rounded-md" />
+                        </div>
+                        <div className="mb-2">
+                            <p className="font-semibold text-sm text-gray-700">Feedback:</p>
+                            <p className="text-sm">{projeto.feedback}</p>
+                        </div>
+                        <div className="mt-4 flex space-x-2">
+                            <button
+                                onClick={() => handleDelete(projeto.$id)}
+                                className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded text-xs"
+                            >
+                                Deletar
+                            </button>
+                            <Link
+                                href={/editar/${projeto.rm}/${projeto.$id}}
+                                className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded text-xs"
+                            >
+                                Editar
+                            </Link>
+                        </div>
+                    </div>
+                ))
+            ) : (
+                <div className="text-center text-gray-500 text-sm">
+                    Nenhum projeto encontrado
+                </div>
+            )}
         </div>
+    </div>
     );
 }
