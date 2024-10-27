@@ -12,7 +12,7 @@ export default function FormCadastro() {
         desc: "",
         nota: 0,
         tipoAvaliacao: "",
-        foto: "",
+        link: "",
         feedback: "",
     });
 
@@ -34,7 +34,7 @@ export default function FormCadastro() {
                     desc: "",
                     nota:0,
                     tipoAvaliacao: "",
-                    foto: "",
+                    link: "",
                     feedback: "",
                 });
                 console.table(data)
@@ -45,7 +45,7 @@ export default function FormCadastro() {
     }
 
   return (
-    <div className="p-4 max-w-md mx-auto">
+    <section className="p-4 max-w-md mx-auto">
     <h1 className="text-2xl font-semibold mb-6 text-center">Cadastro</h1>
     <form onSubmit={handleSubmit} className="space-y-4 ">
         <div>
@@ -118,13 +118,13 @@ export default function FormCadastro() {
             </select>
         </div>
         <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Foto:</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Link:</label>
             <input
                 type="text"
                 name="foto"
-                value={projeto.foto}
-                placeholder="Insira a URL da foto"
-                onChange={(e) => setProjeto({ ...projeto, foto: e.target.value })}
+                value={projeto.link}
+                placeholder="Insira o link do projeto"
+                onChange={(e) => setProjeto({ ...projeto, link: e.target.value })}
                 className="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
         </div>
@@ -145,6 +145,6 @@ export default function FormCadastro() {
             Cadastrar
         </button>
     </form>
-</div>
+</section>
   )
 }
