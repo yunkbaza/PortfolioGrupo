@@ -17,6 +17,6 @@ export type TipoProjeto = {
     desc:string; // 200
     nota:number; // 0-10
     tipoAvaliacao:string; // 15
-    foto:string; // 100
+    link:string; // 100
     feedback:string; // 150
 }

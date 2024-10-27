@@ -49,8 +49,8 @@ export async function atualizaProjeto(rm:string , idProjeto:string , projeto:Tip
 export async function PUT(request:Request,{params}:{params:{rm:string , id:string}}) {
     
     try {
-        const {nome , desc , nota , tipoAvaliacao , foto , feedback} = await request.json();
-        const projeto = {nome , desc , nota , tipoAvaliacao , foto , feedback} as TipoProjeto;
+        const {nome , desc , nota , tipoAvaliacao , link , feedback} = await request.json();
+        const projeto = {nome , desc , nota , tipoAvaliacao , link , feedback} as TipoProjeto;
         const rm = params.rm;
         const idProjeto = params.id;
         await atualizaProjeto(rm , idProjeto , projeto);

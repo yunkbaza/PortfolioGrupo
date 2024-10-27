@@ -23,8 +23,8 @@ export async function createProjeto(projeto: TipoProjeto, rm: string) {
 
 export async function POST(request: Request) {
     try {
-        const { nome, rm, desc, nota, tipoAvaliacao, foto, feedback } = await request.json();
-        const projeto = { nome, rm, desc, nota, tipoAvaliacao, foto, feedback } as TipoProjeto;
+        const { nome, rm, desc, nota, tipoAvaliacao, link, feedback } = await request.json();
+        const projeto = { nome, rm, desc, nota, tipoAvaliacao, link, feedback } as TipoProjeto;
         const id = projeto.rm
         const response = await createProjeto(projeto, id);
 

@@ -1,10 +1,40 @@
 [
     {
+        "rm" : "556771",
+        "nome" : "Allan",
+        "nomeCompleto" : "Allan Gabriel Baeza Amirati",
+        "area" : "Front-end",
+        "desc" : "Sou um estudante da FIAP, tenho preferência na área do front-end por gostar de design. A área que ele está se dedicando é a linguagem Swift, e trabalho na Drogasil. Eu também gosto de escrever, poemas e músicas e desenhos.",
+        "github" : "https://github.com/yunkbaza",
+        "linkedin" : "https://www.linkedin.com/in/allan-gabriel-baeza-a281b1233/",
+        "email" : "allanbamirati@live.com"
+    },
+    {
+        "rm" : "557509",
+        "nome" : "Breno",
+        "nomeCompleto" : "Breno Gustavo dos Santos",
+        "area" : "Back End",
+        "desc" : "Desenvolvedor back end",
+        "github" : "https://github.com/gitbreno",
+        "linkedin" : "https://www.linkedin.com/in/brenogustavo/",
+        "email" : "breno.gusta@gmail.com"
+    },
+    {
+        "rm" : "557774",
+        "nome" : "Júlio",
+        "nomeCompleto" : "Júlio César Nunes Oliveira",
+        "area" : "FullStack",
+        "desc" : "Entusiasta no ramo da computação com foco em Inteligência Artificial , possuo certificações no ramo da informática e administração que servem como suporte para minha inserção no mercado de trabalho. Destaco como qualidades pessoais o comprometimento e a vontade de aprender, além de saber trabalhar em equipe.",
+        "github" : "https://github.com/jubshereman",
+        "linkedin" : "https://www.linkedin.com/in/jubshere/",
+        "email" : "contatojulio478@gmail.com"
+    },
+    {
         "rm" : "555497",
         "nome" : "Luiz",
         "nomeCompleto" : "Luiz Paulo Freitas Fernandes",
         "area" : "FullStack",
-        "desc" : "Desenvolvedor Full Stack",
+        "desc" : "Estudante de Análise e Desenvolvimento de Sistemas na FIAP com conhecimentos em HTML, CSS, JavaScript, React.js, Next.js, Tailwind e Git com foco em desenvolvimento Front-end.",
         "github" : "https://github.com/luizpaulo73",
         "linkedin" : "https://www.linkedin.com/in/luizpaulo73/",
         "email" : "luiz.paulo2005@hotmail.com"
@@ -18,15 +48,5 @@
         "github" : "https://github.com/vitorkenzoo",
         "linkedin" : "https://br.linkedin.com/in/vitor-mizumoto-b419a6315",
         "email" : "vitormizumoto@hotmail.com"
-    },
-    {
-        "rm" : "557774",
-        "nome" : "Júlio",
-        "nomeCompleto" : "Júlio César Nunes Oliveira",
-        "area" : "FullStack",
-        "desc" : "Entusiasta no ramo da computação com foco em Inteligência Artificial , possuo certificações no ramo da informática e administração que servem como suporte para minha inserção no mercado de trabalho. Destaco como qualidades pessoais o comprometimento e a vontade de aprender, além de saber trabalhar em equipe.",
-        "github" : "https://github.com/jubshereman",
-        "linkedin" : "https://www.linkedin.com/in/jubshere/",
-        "email" : "contatojulio478@gmail.com"
     }
 ]
