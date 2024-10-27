@@ -48,8 +48,15 @@ export default function ListaProjetos() {
 
     return (
         <div className="w-11/12 sm:p-4">
-            <h2 className="text-xl font-semibold mb-2">Projetos</h2>
-            <h2 className="text-lg mb-4">Aluno: {alunoSelecionado?.nome}</h2>
+            <div className='flex gap-10 items-center'>
+            <div>
+            <h2 className="text-xl font-semibold">Projetos</h2>
+            <h2 className="text-lg">Aluno: {alunoSelecionado?.nome}</h2>
+            </div>
+            <nav>
+                <Link href={"/cadastro-projetos"} className="text-xl bg-verdeCard hover:bg-verdeAgua p-2 rounded-2xl duration-300">Cadastrar</Link>
+            </nav>
+            </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto">
                 {listaProjetos && listaProjetos.length > 0 ? (
                     listaProjetos.map((projeto: TipoProjeto) => (

@@ -44,11 +44,15 @@ export default function Projeto(props: {tipo:string , rm:string}) {
       <h2 className="text-center font-bold text-xl mb-2">{tipo}</h2>
       <nav>
         <ul>
-          {listaProjetos.filter(projeto => projeto.tipoAvaliacao == props.tipo).map((projeto) => (
+          {
+          listaProjetos.filter(projeto => projeto.tipoAvaliacao == props.tipo).length > 0 ?
+          listaProjetos.filter(projeto => projeto.tipoAvaliacao == props.tipo).map((projeto) => (
             <li key={projeto.$id} className="text-center">
               <Link href={`/projeto/${props.rm}/${projeto.$id}`} className="underline">{"<"}{projeto.nome}{">"}</Link>
             </li>
-     ))}
+     )) : <li className="text-center">
+        <p>Não há projetos Cadastrados</p>
+      </li>}
         </ul>
       </nav>
     </div>
