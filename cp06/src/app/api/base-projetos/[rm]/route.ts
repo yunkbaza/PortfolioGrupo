@@ -16,10 +16,11 @@ export async function getByRm(rm:string) {
     }    
 }
 
-export async function GET(request:Request,{params}:{params:{rm:string}}) {
+export async function GET(request:Request,context:{params:{rm:string}}) {
+    const { rm } = context.params;
     try {
 
-        const { rm } = await params;
+        
 
         const documentos = await getByRm(rm);
         
