@@ -137,7 +137,7 @@ export default function Editar() {
             </select>
         </div>
         <div>
-            <label className="text-sm font-semibold mb-1">Foto:</label>
+            <label className="text-sm font-semibold mb-1">Link:</label>
             <input
                 type="text"
                 name="link"
