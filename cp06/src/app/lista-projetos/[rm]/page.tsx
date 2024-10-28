@@ -83,7 +83,7 @@ export default function ListaProjetos() {
                             </div>
                             <div className="mb-2">
                                 <p className="font-semibold text-sm lg:text-xl text-gray-700">Link:</p>
-                                <Link className="text-sm" href={projeto.link} target="_blank"></Link>
+                                <Link className="text-sm lg:text-xl bg-verdeCard hover:bg-verdeAgua rounded-2xl px-1" href={projeto.link} target="_blank">Ir ao Projeto</Link>
                             </div>
                             <div className="mb-2">
                                 <p className="font-semibold text-sm lg:text-xl text-gray-700">Feedback:</p>
